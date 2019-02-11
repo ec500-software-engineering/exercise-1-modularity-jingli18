@@ -14,8 +14,6 @@ def main():
 
     patientData = input_module.readSensorData()
     patientInfo = input_module.getPatientInfo()
-    input_sendor_data = json.loads(patientData)
-    input_patient_data = json.loads(patientInfo)
 
     '''
     storage_module
