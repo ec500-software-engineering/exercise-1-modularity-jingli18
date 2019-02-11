@@ -10,27 +10,22 @@ class Patient_output():
         self.PID = 0
         self.patient_dir = os.getcwd()
 
-    def readjson(self):        
-        with open(json_dir + "\\patient.json","r") as read:
-        new_patient_dic = json.load(read)
-        print(new_patient_dic)
+    def readjson(self, data):        
+        #with open(json_dir + "\\patient.json","r") as read:
+        self.new_patient_dic = json.loads(data)
+        #print(new_patient_dic)
         print("Json Read!")
 
-    def outprint():
-        print(new_patient_dic[self.key])
+    def outprint(self,key):
+        output = self.new_patient_dic[key]
+        print(output)
 
     def control(self):
-        self.key = input("Enter the date you want to check: ")
-        if key in new_patient_dic.keys() :
-            self.outprint()
+        key = input("Enter the date you want to check: (bloodPressure, pulse, bloodOx, alert_message)")
+        if key in ["bloodPressure", "pulse", "bloodOx", "alert_message"] :
+            self.outprint(key)
         elif key == 'c':
             return 0
         else:
-            print("Please input the right keyword('blood_oxgen', 'blood_pressure' or 'heart_rate'")
-        thd.Timer(5,self.control).start()
-
-        return 0
-
-
-
-    control()
+            print("Please input the right keyword(bloodPressure, pulse, bloodOx, alert_message")
+        self.control()

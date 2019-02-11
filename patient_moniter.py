@@ -12,8 +12,8 @@ def main():
     from https://github.com/alexlin0625/EC500_Spring19/tree/input_module
     '''
 
-    patientData = input.readSensorData()
-    patientInfo = input.getPatientInfo()
+    patientData = input_module.readSensorData()
+    patientInfo = input_module.getPatientInfo()
     input_sendor_data = json.loads(patientData)
     input_patient_data = json.loads(patientInfo)
 
@@ -38,12 +38,7 @@ def main():
     patient_test = jasontest.Patient_output()
     patient_test.readjson(patient_Data)
     patient_test.control()
-
-    '''update this table to set pulse = 100: '''
-    #storage.update("1234", '17:05:20pm-01/02/2019', 'bloodOx', '90')
-    '''search a person with PatientID 1234: '''
-    #patient_alert = storage.searchPerson("1234")
-
+    print(patient_test.new_patient_dic)
 
 if __name__ == "__main__":
     main()
