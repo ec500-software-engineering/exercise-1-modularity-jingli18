@@ -9,12 +9,13 @@ class Patient_output():
     def __init__(self):
         self.PID = 0
         self.patient_dir = os.getcwd()
+        print("*********Welcome to Patient Moniter System**********")
 
     def readjson(self, data):        
         #with open(json_dir + "\\patient.json","r") as read:
         self.new_patient_dic = json.loads(data)
         #print(new_patient_dic)
-        print("Json Read!")
+        print("Patient Data Read!")
 
     def outprint(self,key):
         output = self.new_patient_dic[key]
