@@ -21,12 +21,12 @@ def insert(PatientInfo, SensorData):
     PatientInfo = json.loads(PatientInfo)
     SensorData = json.loads(SensorData)
     dict = {}
-    for id in PatientInfo:
-        dict['PatientID'] = id
-        for k, v in PatientInfo[id].items():
-            dict[k] = v
-        for k, v in SensorData[id].items():
-            dict[k] = v
+    # for id in PatientInfo:
+    #     dict['PatientID'] = id
+    for k, v in PatientInfo.items():
+        dict[k] = v
+    for k, v in SensorData.items():
+        dict[k] = v
     mycol.insert_one(dict)
 
 def searchPerson(PatientID):
