@@ -34,6 +34,3 @@ def genSensorData():
 	json_string = json.dumps(sensordata)
 	return json_string
 
-if __name__ == "__main__":
-	getPatientInfo()
-	readSensorData()
