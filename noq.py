@@ -5,7 +5,6 @@ import random
 import input_module
 import alertt
 import storage
-import json
 
 # generate data in random time
 def generate_data(q, q_alert, q_data):
