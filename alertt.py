@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import json
+
 '''
 Create on 02/10/2019
 @author: Zhangyu Wan
@@ -13,14 +17,12 @@ Basically I rewrited the whole file.
 The original one by mohitbeniwal is bullshit.
 '''
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Wed Feb  6 09:29:32 2019
 
 @author: mohitbeniwal
 """
-import json
+
 
 def alertCheck(j_o):
     j=json.loads(j_o)
