@@ -5,7 +5,6 @@ import random
 import input_module
 import alertt
 import storage
-import json
 
 class patient_monitor():
     # generate data in random time
