@@ -18,7 +18,6 @@ class patient_monitor():
         while 1:
             times = random.randint(4,7)
             patientData = input_module.genSensorData()
-            patientDic = json.loads(patientData)
             patientInfo = input_module.genPatientInfo()
             alert_mes = alertt.alertCheck(patientData)
             #print(patientInfo)
