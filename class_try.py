@@ -64,7 +64,7 @@ class patient_monitor():
             print(data)
             q_data.task_done()
             
-    # thread that print the time
+    # thread that print the time every 1 second
     def print_time(self):
         while True:
             time.sleep(1)
